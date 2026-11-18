@@ -220,7 +220,8 @@ const YIG_RAYMARCH_WGSL = /* wgsl */`
     }
 
     col += venomHalo;
-    return vec4<f32>(col, select(maxDist, t, hit));
+    // MODIFIED: 修复包围球早退后的变量名残留（原 maxDist 未定义，应为 tEnd，否则 WGSL 编译失败导致 2-4 无法进入）
+    return vec4<f32>(col, select(tEnd, t, hit));
   }
 
   @fragment
