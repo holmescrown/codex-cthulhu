@@ -156,7 +156,8 @@
         name_en: "Ithaqua",
         title: "风行者、温迪戈、极北冰原的寂静死神",
         description: "呼啸于北极圈与严寒针叶林上空的恐怖旧日支配者。祂在暴风雪中显化为顶天立地的黑影巨人，唯有一双燃烧着猩红寒光的空洞眼窝清晰可见。被祂盯上的极地探险者会被强行卷上万米高空，在刺骨罡风中双脚冻碎，化作与狂风同行的枯骨。",
-        implemented: false
+        // MODIFIED: 激活 2-6 伊塔库亚高维实体观测
+        implemented: true
       },
       {
         id: "2-7",
@@ -502,6 +503,13 @@
         gazeBtn: "👁 长按：惊扰黑佛沉眠",
         gazeTip: "惊扰黑佛沉眠 → 掉 SAN + 无定形之子暴动",
         audioName: "恩开伊地穴音景"
+      },
+      "2-6": {
+        pipeline: "WGSL WENDIGO-GALE PIPELINE",
+        glow: "极北暴风雪涡流 (Arctic Blizzard)",
+        gazeBtn: "👁 长按：直视暴风雪猩红眼窝",
+        gazeTip: "直视暴风雪猩红眼窝 → 掉 SAN + 万米罡风卷袭",
+        audioName: "极北罡风音景"
       },
     // 默认回退项：与原 openCreatureEntry 中 entityMetaMap["1-1"] 的回退语义保持一致
     DEFAULT: {
